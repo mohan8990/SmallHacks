@@ -1,11 +1,10 @@
-
 <h1> Google Hurdles Bot </h1>
 
-<h3> Directory in repo </h3>
+<h2> Directory in repo </h2>
 
 Doodle bot
 
-<h3> What is it </h3>
+<h2> What is it </h2>
 
 Launch <a href='http://www.google.com/doodles/hurdles-2012'> doodle archive </a> to open the doodle.
 <p>
@@ -13,7 +12,7 @@ Play with it. The game itself has instructions (u have to press <- and -> keys f
 
 And not its hack time. Set your record and open and run the bot. It will beat your personal best.
 
-<h3> How to launch </h3>
+<h2> How to launch </h2>
 
 Once you checkout, run the following commands.
 
