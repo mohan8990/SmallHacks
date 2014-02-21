@@ -1,7 +1,3 @@
-SmallHacks
-==========
-
-Little hacks in past time
 
 <h1> Google Hurdles Bot </h1>
 
