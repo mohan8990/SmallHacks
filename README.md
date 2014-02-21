@@ -9,7 +9,7 @@ Source directory :  SmallHacks\DoodleBot\src
 
 Launch <a href='http://www.google.com/doodles/hurdles-2012'> doodle archive </a> to open the doodle.
 <p>
-Play with it. The game itself has instructions (u have to press <- and -> keys fast to run and space to avoid hurdles).
+Play with it. The game itself has instructions (u have to press <- and -> keys alternatively and rapidly to run fast and space to avoid hurdles).
 
 And not its hack time. Set your record and open and run the bot. It will beat your personal best.
 
