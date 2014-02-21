@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="${project.name}" default="jar" basedir=".">
+    
+    <property file="build.properties"/>
+    
+    <tstamp prefix="build-info">
+        <format property="current-date" pattern="yyMMdd" locale="en" />
+        <format property="current-time" pattern="hh:mm:ss a z" locale="en" timezone="PST" />
+        <format property="build-time" pattern="hh_mm" locale="en" timezone="PST" />
+    </tstamp>
+    
+    <propertyfile file="build.number">
+        <entry key="build.number" value="${build.version.prefix}.${build-info.current-date}.${build-info.build-time}"/>
+    </propertyfile>
+    
+    <path id="classpath">
+        <fileset dir="${dir.lib}" includes="**/*.jar"/>
+        <fileset dir="${basedir}" includes="*.jar"/>
+    </path>
+    
+    <target name="clean">
+        <delete dir="${dir.classes}"/>
+        <delete dir="${dir.jar}"/>
+    </target>
+    
+     <target name="compile" depends="clean">
+        <mkdir dir="${dir.classes}"/>
+        <javac includeantruntime="true"
+               debug="true"  
+               srcdir="${dir.src}" 
+               destdir="${dir.classes}" 
+               classpathref="classpath" />
+     </target>
+     
+      <target name="jar" depends = "compile">
+        <jar destfile="${dir.jar}/${project.jar.name}" basedir="${dir.classes}">
+            <manifest>
+                <attribute name="Built-By" value="${user.name}"/>
+                <attribute name="Built-At" value="${build-info.current-date} ${build-info.current-time}"/>
+                <attribute name="Built-On" value="${os.name} using ${build.compiler}"/>
+            </manifest>
+        </jar>
+        
+       <echo> Jar Built by ${user.name} 
+     Built at ${build-info.current-date} ${build-info.current-time} 
+     Built on ${os.name} using java ${ant.java.version} </echo>  
+     
+     <echo file="build.info"> Jar Built by ${user.name} 
+     Built at ${build-info.current-date} ${build-info.current-time} 
+     Built on ${os.name} using java ${ant.java.version}
+     Build number ${build.version.prefix}.${build-info.current-date}.${build-info.build-time}
+     </echo>  
+     
+    </target>
+    
+      
+        <target name="run">
+            <java classname="mohan.smallhack.DoodleHurdleBot">
+                <classpath>
+                    <pathelement location="${dir.jar}/${project.jar.name}"/>
+                </classpath>
+            </java>
+        </target>
+     
+</project>
