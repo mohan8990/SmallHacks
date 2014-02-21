@@ -2,7 +2,8 @@
 
 <h2> Directory in repo </h2>
 
-Doodle bot
+Main directory   :  SmallHacks\DoodleBot <br>
+Source directory :  SmallHacks\DoodleBot\src
 
 <h2> What is it </h2>
 
