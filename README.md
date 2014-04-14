@@ -11,7 +11,7 @@ Launch <a href='http://www.google.com/doodles/hurdles-2012'> doodle archive </a>
 <p>
 Play with it. The game itself has instructions (u have to press <- and -> keys alternatively and rapidly to run fast and space to avoid hurdles).
 
-And not its hack time. Set your record and open and run the bot. It will beat your personal best.
+And now its hack time. Set your record and open and run the bot. It will beat your personal best.
 
 <h2> How to launch </h2>
 
